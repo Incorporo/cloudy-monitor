@@ -91,9 +91,9 @@ export const ObjectPreview = (): JSX.Element => {
 	return (
 		<dialog
 			ref={modal}
-			className="z-20 w-full max-w-7xl rounded-md border-1 border-secondary-dark/20 p-4 outline-none  backdrop:bg-secondary/30 dark:border-secondary/20 dark:backdrop:bg-secondary-dark/30"
+			className="z-20 w-full max-w-7xl rounded-md border-1 border-secondary-dark/20 p-4 outline-none  backdrop:bg-secondary/30 dark:border-secondary/20 dark:backdrop:bg-secondary-dark/30 max-h-[calc(100vh-10rem)]"
 		>
-			<div className="flex flex-col items-center gap-2" ref={modalInner}>
+			<div className="flex flex-col items-center gap-2 max-h-[calc(100vh-10rem)]" ref={modalInner}>
 				<div className="flex w-full flex-row justify-center">
 					<h5>{previewKey?.replace(/.*\//, '')}</h5>
 
@@ -131,7 +131,7 @@ export const ObjectPreview = (): JSX.Element => {
 					<iframe
 						title="PDF Visualizer"
 						src={`/api/bucket/${currentBucket?.raw}${addLeadingSlash(previewKey)}`}
-						className="max-h-[calc(100vh-10rem)] max-w-full"
+						className="max-h-[calc(100vh-10rem)] max-w-full w-full"
 					/>
 				)}
 			</div>
