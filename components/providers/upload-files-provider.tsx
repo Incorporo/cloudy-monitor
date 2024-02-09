@@ -1,8 +1,10 @@
 'use client';
 
-import { useXhr } from '@/utils/hooks';
 import { createContext, useCallback, useContext, useMemo, useState } from 'react';
+
 import type { FileInfo } from '@/app/api/bucket/[bucket]/route';
+import { useXhr } from '@/utils/hooks';
+
 import { useLocation } from './location-provider';
 
 type FileWithDir = { dir: string; file: File };

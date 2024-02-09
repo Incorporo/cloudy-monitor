@@ -1,10 +1,12 @@
 'use client';
 
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+
+import { useAction } from 'next-safe-action/hook';
+
 import type { updateCacheHeader } from '@/utils/actions/settings';
 import type { SettingsRecord } from '@/utils/db/queries';
-import { useAction } from 'next-safe-action/hook';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 
 type Props = {
 	settings: Record<string, SettingsRecord> | undefined;

@@ -1,15 +1,17 @@
 'use client';
 
-import { CaretCircleDown } from '@/components';
-import type { VisibilityRecord } from '@/utils/db/queries';
-import { useOnClickOutside } from '@/utils/hooks';
+import { useMemo, useRef } from 'react';
+import { useRouter } from 'next/navigation';
+
 import type { ColumnDef } from '@tanstack/react-table';
 import { flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
-import { useMemo, useRef } from 'react';
 import { useAction } from 'next-safe-action/hook';
-import type { updateVisibility } from '@/utils/actions/access-control';
-import { useRouter } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
+
+import { CaretCircleDown } from '@/components';
+import type { updateVisibility } from '@/utils/actions/access-control';
+import type { VisibilityRecord } from '@/utils/db/queries';
+import { useOnClickOutside } from '@/utils/hooks';
 
 export type VisibilityTableRecord = Omit<VisibilityRecord, 'id' | 'createdAt'> & {
 	id?: number;

@@ -1,9 +1,11 @@
 'use client';
 
-import { twMerge } from 'tailwind-merge';
-import type { FileObject } from '@/utils';
 import type { Row } from '@tanstack/react-table';
-import { useObjectExplorer, useExplorerEvents } from '../providers';
+import { twMerge } from 'tailwind-merge';
+
+import type { FileObject } from '@/utils';
+
+import { useExplorerEvents,useObjectExplorer } from '../providers';
 import { ObjectPreviewInner } from './object-preview-inner';
 
 type Props = {

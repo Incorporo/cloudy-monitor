@@ -1,13 +1,14 @@
 'use client';
 
-import { useRouter, useSelectedLayoutSegments } from 'next/navigation';
 import { useMemo } from 'react';
 import Link from 'next/link';
-import { addLeadingSlash, formatFullPath, formatBucketName, toTitleCase } from '@/utils';
-import { ThemeToggle, UploadFilesProvider } from '../providers';
+import { useRouter, useSelectedLayoutSegments } from 'next/navigation';
+
+import { addLeadingSlash, formatBucketName, formatFullPath, toTitleCase } from '@/utils';
+
 import { ArrowLeft, ArrowRight, CaretRight } from '../icons';
-import { UploadFileButton } from '../file-upload';
 import { ToggleGridViewButton, TogglePreviewPaneButton } from '../object-explorer';
+import { ThemeToggle } from '../providers';
 
 const TopNavSection = ({ children }: { children: React.ReactNode }): JSX.Element => (
 	<div className="flex flex-row items-center gap-4">{children}</div>
@@ -52,10 +53,12 @@ export const TopNav = (): JSX.Element => {
 		<div className="flex max-h-[3rem] min-h-[3rem] flex-row items-center justify-between border-b-1 border-secondary px-4 py-2 dark:border-secondary-dark">
 			<TopNavSection>
 				<div className="flex flex-row items-center gap-2">
+					{/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
 					<button type="button" onClick={() => router.back()}>
 						<ArrowLeft weight="bold" className="h-5 w-5" />
 					</button>
 
+					{/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
 					<button type="button" onClick={() => router.forward()}>
 						<ArrowRight weight="bold" className="h-5 w-5" />
 					</button>
@@ -84,9 +87,9 @@ export const TopNav = (): JSX.Element => {
 
 				<TogglePreviewPaneButton />
 
-				<UploadFilesProvider>
-					<UploadFileButton />
-				</UploadFilesProvider>
+				{/* <UploadFilesProvider> */}
+				{/*	<UploadFileButton /> */}
+				{/* </UploadFilesProvider> */}
 
 				<ThemeToggle />
 			</TopNavSection>

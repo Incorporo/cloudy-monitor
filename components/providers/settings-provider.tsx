@@ -1,7 +1,8 @@
 'use client';
 
-import { useLocalStorage } from '@/utils/hooks/use-local-storage';
 import { createContext, useCallback, useContext, useMemo } from 'react';
+
+import { useLocalStorage } from '@/utils/hooks/use-local-storage';
 
 export type ISettingsContext = {
 	isPreviewPaneActive: boolean;

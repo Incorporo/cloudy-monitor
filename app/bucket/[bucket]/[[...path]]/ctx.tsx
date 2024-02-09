@@ -1,7 +1,8 @@
 'use client';
 
-import { useLocation } from '@/components';
 import { useEffect } from 'react';
+
+import { useLocation } from '@/components';
 
 export const Ctx = ({ bucketName, path }: { bucketName: string; path: string[] }): JSX.Element => {
 	const { setBucket, setLocation } = useLocation();

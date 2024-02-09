@@ -1,9 +1,12 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
+
+import { XCircle } from '@phosphor-icons/react';
+
 import { addLeadingSlash } from '@/utils';
 import { useOnClickOutside } from '@/utils/hooks';
-import { XCircle } from '@phosphor-icons/react';
-import { useEffect, useRef, useState } from 'react';
+
 import { useLocation, useObjectExplorer } from '../providers';
 
 export const ObjectPreview = (): JSX.Element => {
@@ -119,6 +122,15 @@ export const ObjectPreview = (): JSX.Element => {
 					<video
 						src={`/api/bucket/${currentBucket?.raw}${addLeadingSlash(previewKey)}`}
 						controls
+						className="max-h-[calc(100vh-10rem)] max-w-full"
+					/>
+				)}
+
+				{previewKey && data?.httpMetadata?.contentType?.startsWith('application/pdf') && (
+					// eslint-disable-next-line @next/next/no-img-element,jsx-a11y/iframe-has-title
+					<iframe
+						title="PDF Visualizer"
+						src={`/api/bucket/${currentBucket?.raw}${addLeadingSlash(previewKey)}`}
 						className="max-h-[calc(100vh-10rem)] max-w-full"
 					/>
 				)}

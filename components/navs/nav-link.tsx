@@ -1,9 +1,11 @@
 'use client';
 
-import { addLeadingSlash } from '@/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
 import { twMerge } from 'tailwind-merge';
+
+import { addLeadingSlash } from '@/utils';
 
 type Props = {
 	asButton?: () => void;

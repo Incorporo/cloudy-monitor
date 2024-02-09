@@ -3,8 +3,9 @@
 import 'server-only';
 
 import { z } from 'zod';
-import { actionWithSession } from './_action';
+
 import { q } from '../db';
+import { actionWithSession } from './_action';
 
 export const updateVisibility = actionWithSession(
 	z.object({

@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
-import { existsSync, writeFileSync, mkdirSync, readdirSync, rmSync, appendFileSync } from 'fs';
-import { join, resolve } from 'path';
+import { appendFileSync,existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'fs';
 import { Kysely } from 'kysely';
+import { join, resolve } from 'path';
+
 import { D1Dialect } from './kysely-d1';
 
 type MigrationFunction = (

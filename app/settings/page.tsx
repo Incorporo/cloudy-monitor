@@ -1,6 +1,7 @@
 import { Header } from '@/components';
-import { getSettingsRecords } from '@/utils/db/queries';
 import { updateCacheHeader } from '@/utils/actions/settings';
+import { getSettingsRecords } from '@/utils/db/queries';
+
 import { SettingsGrid } from './settings-grid';
 
 const Page = async (): Promise<JSX.Element> => {

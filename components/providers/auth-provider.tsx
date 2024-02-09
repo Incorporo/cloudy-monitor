@@ -1,7 +1,8 @@
 'use client';
 
-import type { User } from '@/utils/auth';
 import { createContext, useContext, useMemo, useState } from 'react';
+
+import type { User } from '@/utils/auth';
 
 export type IAuthContext = {
 	isAuthEnabled: boolean;

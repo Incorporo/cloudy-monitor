@@ -1,10 +1,13 @@
-import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-import { LocationProvider, ThemeProvider, SideNav, TopNav, SettingsProvider } from '@/components';
 import './globals.css';
-import { getBuckets } from '@/utils/cf';
+
+import localFont from 'next/font/local';
+
+import type { Metadata } from 'next';
+
+import { LocationProvider, SettingsProvider,SideNav, ThemeProvider, TopNav } from '@/components';
 import { AuthProvider } from '@/components/providers/auth-provider';
 import { getUser } from '@/utils/auth';
+import { getBuckets } from '@/utils/cf';
 
 export const runtime = 'edge';
 

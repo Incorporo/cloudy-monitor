@@ -1,9 +1,11 @@
+import { cache } from 'react';
+
 import { KyselyAdapter } from '@auth/kysely-adapter';
 import NextAuth from 'next-auth';
 import GitHub from 'next-auth/providers/github';
-import { cache } from 'react';
-import { db } from '../db/schema';
+
 import { q } from '../db';
+import { db } from '../db/schema';
 
 const deriveAuthProviders = () => {
 	const providers = [];

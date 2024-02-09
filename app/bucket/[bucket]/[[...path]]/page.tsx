@@ -1,6 +1,7 @@
-import { getBucketItems } from '@/utils/cf';
-import { formatFullPath } from '@/utils';
 import { ObjectExplorer, PreviewPane } from '@/components';
+import { formatFullPath } from '@/utils';
+import { getBucketItems } from '@/utils/cf';
+
 import type { RouteParams } from './layout';
 
 type Props = { params: RouteParams };

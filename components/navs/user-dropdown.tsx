@@ -1,8 +1,11 @@
 'use client';
 
 import { useRef } from 'react';
-import { useOnClickOutside } from '@/utils/hooks';
+
 import { signIn, signOut } from 'next-auth/react';
+
+import { useOnClickOutside } from '@/utils/hooks';
+
 import { CaretDown } from '../icons';
 import { useAuth } from '../providers/auth-provider';
 

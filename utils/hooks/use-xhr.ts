@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState, useCallback, useEffect, useMemo } from 'react';
+import { useCallback, useEffect, useMemo,useRef, useState } from 'react';
 
 export const useXhr = () => {
 	const xhrRef = useRef<{ xhr: XMLHttpRequest; cleanup: () => void } | null>(null);

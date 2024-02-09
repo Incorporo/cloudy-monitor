@@ -1,6 +1,7 @@
-import { getUser } from '@/utils/auth';
 import { notFound } from 'next/navigation';
+
 import { TabGroup } from '@/components';
+import { getUser } from '@/utils/auth';
 
 type Props = { children: React.ReactNode };
 

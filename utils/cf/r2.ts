@@ -1,5 +1,7 @@
-import { binding } from 'cf-bindings-proxy';
 import { cache } from 'react';
+
+import { binding } from 'cf-bindings-proxy';
+
 import { getUser, isAuthAvailable } from '../auth';
 import { q } from '../db';
 

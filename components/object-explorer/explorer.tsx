@@ -9,7 +9,7 @@ import {
 	useRef,
 	useState,
 } from 'react';
-import { twMerge } from 'tailwind-merge';
+
 import type { ColumnDef, SortingState } from '@tanstack/react-table';
 import {
 	flexRender,
@@ -18,13 +18,16 @@ import {
 	useReactTable,
 } from '@tanstack/react-table';
 import { useVirtualizer } from '@tanstack/react-virtual';
-import { parseObject, type FileObject } from '@/utils';
-import { useOnClickOutside, useResizeObserver } from '@/utils/hooks';
+import { twMerge } from 'tailwind-merge';
+
+import { type FileObject,parseObject } from '@/utils';
 import { alphanumeric } from '@/utils/compare-alphanumeric-patched';
-import { getFileIcon, getSortIcon } from './file-icons';
-import { ObjectRow } from './object-row';
+import { useOnClickOutside, useResizeObserver } from '@/utils/hooks';
+
 import { useExplorerEvents, useObjectExplorer, useSettings } from '../providers';
+import { getFileIcon, getSortIcon } from './file-icons';
 import { ObjectGridItem } from './object-grid-item';
+import { ObjectRow } from './object-row';
 
 // TODO: Settings context that persists size and order of columns
 

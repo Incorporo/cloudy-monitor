@@ -1,10 +1,12 @@
 'use client';
 
 import { createContext, useCallback, useContext, useMemo } from 'react';
-import type { FileObject } from '@/utils/file-object';
 import { useRouter } from 'next/navigation';
-import { useObjectExplorer } from './object-explorer-provider';
+
+import type { FileObject } from '@/utils/file-object';
+
 import { useLocation } from './location-provider';
+import { useObjectExplorer } from './object-explorer-provider';
 
 export type IExplorerEventsContext = {
 	handleDoubleClick: (object: Pick<FileObject, 'isDirectory' | 'path'>) => void;

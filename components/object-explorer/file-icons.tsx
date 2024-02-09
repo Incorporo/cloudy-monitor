@@ -1,16 +1,17 @@
 import type { FileType } from '@/utils';
+
 import {
+	CaretDown,
+	CaretUp,
 	File,
-	FileZip,
 	FileAudio,
 	FileCode,
 	FileImage,
 	FilePdf,
 	FileText,
 	FileVideo,
+	FileZip,
 	FolderSimple,
-	CaretUp,
-	CaretDown,
 } from '../icons';
 
 const fileIconsMap: { [key in FileType]: typeof File } = {

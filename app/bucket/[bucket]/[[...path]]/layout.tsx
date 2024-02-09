@@ -1,8 +1,11 @@
-import { validateBucketName } from '@/utils/cf';
-import { formatBucketName, formatFullPath } from '@/utils';
-import { ObjectExplorerProvider, ExplorerEventsProvider, ObjectPreview } from '@/components';
-import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+
+import type { Metadata } from 'next';
+
+import { ExplorerEventsProvider, ObjectExplorerProvider, ObjectPreview } from '@/components';
+import { formatBucketName, formatFullPath } from '@/utils';
+import { validateBucketName } from '@/utils/cf';
+
 import { Ctx } from './ctx';
 
 export type RouteParams = { bucket: string; path?: string[] };

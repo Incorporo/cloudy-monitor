@@ -1,6 +1,7 @@
 import { binding } from 'cf-bindings-proxy';
 import type { Generated, GeneratedAlways } from 'kysely';
 import { Kysely } from 'kysely';
+
 import { D1Dialect } from './kysely-d1';
 
 type AccountId = number;

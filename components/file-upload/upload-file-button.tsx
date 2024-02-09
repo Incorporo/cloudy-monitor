@@ -2,7 +2,9 @@
 
 import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+
 import { twMerge } from 'tailwind-merge';
+
 import { UploadSimple, XCircle } from '../icons';
 import { useLocation, useUploadFiles } from '../providers';
 import { DropZone } from './drop-zone';
