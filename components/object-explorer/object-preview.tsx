@@ -91,7 +91,7 @@ export const ObjectPreview = (): JSX.Element => {
 	return (
 		<dialog
 			ref={modal}
-			className="z-20 w-full max-w-xl rounded-md border-1 border-secondary-dark/20 p-4 outline-none  backdrop:bg-secondary/30 dark:border-secondary/20 dark:backdrop:bg-secondary-dark/30"
+			className="z-20 w-full max-w-7xl rounded-md border-1 border-secondary-dark/20 p-4 outline-none  backdrop:bg-secondary/30 dark:border-secondary/20 dark:backdrop:bg-secondary-dark/30"
 		>
 			<div className="flex flex-col items-center gap-2" ref={modalInner}>
 				<div className="flex w-full flex-row justify-center">
