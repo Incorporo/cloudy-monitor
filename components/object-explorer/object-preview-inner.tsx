@@ -55,15 +55,15 @@ export const ObjectPreviewInner = memo(
 					</>
 				);
 			}
-			case 'pdf': {
-				return (
-					<>
-						{/* eslint-disable-next-line @next/next/no-img-element,jsx-a11y/iframe-has-title */}
-						<iframe title="PDF Visualizer" src={itemApiSrc} className={twMerge(className, 'z-20 h-full w-full')} />
-						<FallbackIcon type={itemType} />
-					</>
-				)
-			}
+			// case 'pdf': {
+			// 	return (
+			// 		<>
+			// 			{/* eslint-disable-next-line @next/next/no-img-element,jsx-a11y/iframe-has-title */}
+			// 			<iframe title="PDF Visualizer" src={itemApiSrc} className={twMerge(className, 'z-20 h-full w-full')} />
+			// 			<FallbackIcon type={itemType} />
+			// 		</>
+			// 	)
+			// }
 			default: {
 				return <FallbackIcon type={itemType} />;
 			}
