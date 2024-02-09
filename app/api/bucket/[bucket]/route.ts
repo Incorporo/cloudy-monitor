@@ -76,7 +76,7 @@ export const GET = async (
 	}
 
 	const { searchParams } = new URL(req.url);
-	const dir = searchParams.get('dir');
+	const dir = searchParams.get('dir') || '/';
 	const cursor = searchParams.get('cursor');
 
 	if (!dir) return new Response('Missing directory', { status: 400 });
